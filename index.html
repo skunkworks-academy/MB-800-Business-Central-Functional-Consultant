@@ -30,7 +30,7 @@
     <h1>MB-800<br>Business Central Functional Consultant</h1>
     <p>A practical, lab-led course for functional consultants implementing Business Central. The course is hosted inside Skunkworks Academy with local module pages and a local lab viewer—no course-content redirect to Microsoft-hosted pages.</p>
     <div class="actions">
-      <a class="btn primary" href="./modules/">Start Module 01</a>
+      <a class="btn primary" href="./modules/01-foundations/">Start Module 01</a>
       <a class="btn secondary" href="#modules">Browse all modules</a>
     </div>
   </div>
@@ -83,7 +83,7 @@
 
 <script src="./assets/mb800-course.js"></script>
 <script>
-MB800.renderModuleDirectory();
+MB800.renderModuleDirectory("./modules/");
 const allLabs=document.getElementById("allLabs");
 allLabs.innerHTML=MB800.modules.flatMap(m=>m.labs.map(l =>
   '<a class="card" href="./labs/?file='+encodeURIComponent(l[2])+'"><span class="pill">LAB '+l[0]+'</span><h3>'+l[1]+'</h3><p>Module '+m.id+' — '+m.title+'</p><div class="meta"><span>'+l[3]+'</span><span>Level '+l[4]+'</span></div></a>'
