@@ -1,7 +1,7 @@
 ---
 lab:
   title: 'Lab 21: Suggest number series with Copilot'
-  module: 'Ship and invoice items in Dynamics 365 Business Central'
+  module: 'Suggest number series with Copilot in Dynamics 365 Business Central'
   duration: 15 minutes
   level: 200
   islab: true

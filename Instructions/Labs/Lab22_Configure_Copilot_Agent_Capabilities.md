@@ -1,7 +1,7 @@
 ---
 lab:
   title: 'Lab 22: Configure Copilot and agent capabilities'
-  module: 'Invoicing customers in Dynamics 365 Business Central'
+  module: 'Configure Copilot and agent capabilities in Dynamics 365 Business Central'
   duration: 30 minutes
   level: 300
   islab: true

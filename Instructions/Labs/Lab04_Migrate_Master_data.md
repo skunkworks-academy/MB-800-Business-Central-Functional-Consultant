@@ -59,7 +59,7 @@ You will perform -
    2. Select **Yes** to export the configuration package.
 4. Prepare data in Excel.
    1. Open the exported excel file from the **Downloads** folder.
-   2. Navigate to the **Vendors Import.xlsx** file (C:\ drive). Copy and paste the information as provided by Contoso.
+   2. Navigate to the **Vendor Import.xlsx** file (C:\ drive). Copy and paste the information as provided by Contoso.
    3. Save the Excel file.
 
 ## Task 2: Import and apply a configuration package
