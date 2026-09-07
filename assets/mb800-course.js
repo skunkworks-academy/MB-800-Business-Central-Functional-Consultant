@@ -34,9 +34,9 @@ modules:[
 ],
 moduleById(id){return this.modules.find(m=>m.id===id)},
 labByFile(file){for(const m of this.modules){const lab=m.labs.find(l=>l[2]===file);if(lab)return {module:m,lab};}return null},
-renderModuleDirectory(){
+renderModuleDirectory(base="./"){
  const el=document.getElementById("moduleGrid");if(!el)return;
- el.innerHTML=this.modules.map(m=>'<a class="card" href="./'+m.slug+'/"><span class="pill">MODULE '+m.id+'</span><h3>'+m.title+'</h3><p>'+m.description+'</p><div class="meta"><span>'+m.labs.length+' labs</span><span>'+m.duration+'</span><span>Level '+m.level+'</span></div></a>').join("");
+ el.innerHTML=this.modules.map(m=>'<a class="card" href="'+base+m.slug+'/"><span class="pill">MODULE '+m.id+'</span><h3>'+m.title+'</h3><p>'+m.description+'</p><div class="meta"><span>'+m.labs.length+' labs</span><span>'+m.duration+'</span><span>Level '+m.level+'</span></div></a>').join("");
 },
 renderModule(id){
  const m=this.moduleById(id);if(!m)return;
