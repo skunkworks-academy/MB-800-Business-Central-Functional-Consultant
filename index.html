@@ -4,118 +4,90 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>MB-800 Business Central Functional Consultant | Skunkworks Academy</title>
-  <meta name="description" content="Skunkworks Academy MB-800 Business Central Functional Consultant course front end with 26 hands-on labs, Microsoft Learn references and certification alignment.">
+  <meta name="description" content="Skunkworks Academy MB-800 Business Central Functional Consultant course with five modules and 26 locally hosted hands-on labs.">
   <meta name="theme-color" content="#050505">
   <link rel="canonical" href="https://skunkworks-academy.github.io/MB-800-Business-Central-Functional-Consultant/">
-  <style>
-    :root{--bg:#050505;--layer:#111;--layer2:#171717;--text:#f4f4f4;--muted:#b8b8b8;--line:#2b2b2b;--blue:#0f62fe;--cyan:#33b1ff;--max:1180px}
-    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--bg);color:var(--text);font:16px/1.55 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-    a{color:inherit}.shell{width:min(calc(100% - 32px),var(--max));margin:auto}.skip{position:absolute;left:-9999px}.skip:focus{left:16px;top:16px;background:#fff;color:#000;padding:10px;z-index:99}
-    header{position:sticky;top:0;z-index:20;background:rgba(5,5,5,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-    .nav{min-height:72px;display:flex;align-items:center;gap:24px}.brand{display:flex;align-items:center;gap:12px;text-decoration:none;margin-right:auto}.mark{width:38px;height:38px;border-radius:8px;background:linear-gradient(135deg,#111 0 42%,#0f62fe 42% 100%);display:grid;place-items:center;font-weight:900}.brand strong{display:block}.brand small{display:block;color:var(--muted);font-size:12px}
-    nav{display:flex;gap:20px}nav a{text-decoration:none;color:#dcdcdc;font-size:14px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 16px;border-radius:6px;text-decoration:none;font-weight:700;border:1px solid transparent}.btn.primary{background:var(--blue);color:#fff}.btn.secondary{border-color:#525252}.hero{padding:88px 0 64px;background:radial-gradient(circle at 80% 15%,rgba(15,98,254,.22),transparent 35%),linear-gradient(180deg,#050505,#0b0b0b)}
-    .grid{display:grid;grid-template-columns:1.25fr .75fr;gap:34px;align-items:start}.eyebrow{text-transform:uppercase;letter-spacing:.12em;color:var(--cyan);font-size:12px;font-weight:800}.hero h1{font-size:clamp(42px,7vw,80px);line-height:.98;letter-spacing:-.045em;margin:16px 0 22px}.hero h1 span{color:#8ab4ff}.lede{font-size:20px;color:#d1d1d1;max-width:780px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin:28px 0}
-    .facts{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:34px}.fact{background:#0b0b0b;padding:18px}.fact strong{display:block;font-size:20px}.fact span{color:var(--muted);font-size:13px}
-    .panel{background:linear-gradient(180deg,#111,#0d0d0d);border:1px solid var(--line);padding:24px;border-radius:12px}.panel h2{font-size:18px;margin:0 0 12px}.outcome{padding:16px 0;border-top:1px solid var(--line)}.outcome:first-of-type{border-top:0}.outcome b{display:block;color:var(--cyan);font-size:12px}.outcome strong{display:block;margin:4px 0}.outcome span{color:var(--muted);font-size:14px}
-    section{padding:72px 0}.section-head{display:flex;justify-content:space-between;gap:32px;align-items:end;margin-bottom:28px}.section-head h2{font-size:clamp(30px,4vw,48px);line-height:1.05;margin:8px 0}.section-head p{max-width:560px;color:var(--muted)}
-    .labs{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card{display:block;background:var(--layer);border:1px solid var(--line);border-radius:10px;padding:20px;text-decoration:none;min-height:185px;transition:.18s transform,.18s border-color}.card:hover{transform:translateY(-2px);border-color:#525252}.num{display:inline-flex;min-width:42px;height:30px;align-items:center;justify-content:center;border-radius:999px;background:#1d1d1d;color:var(--cyan);font-weight:800;font-size:12px}.card h3{margin:16px 0 8px;font-size:19px}.card p{color:var(--muted);font-size:14px}.card span:last-child{display:block;margin-top:18px;color:#8ab4ff;font-weight:700}
-    .light{background:#f4f4f4;color:#111}.light .section-head p,.light .copy{color:#525252}.path{display:grid;grid-template-columns:1fr 1fr;gap:20px}.step{background:#fff;border:1px solid #dcdcdc;padding:22px}.step b{font-size:12px;color:#0043ce}.step h3{margin:6px 0 8px}.step p{color:#525252}
-    footer{border-top:1px solid var(--line);padding:34px 0;color:var(--muted)}.footer{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}.footer a{color:#dcdcdc}
-    @media(max-width:900px){.grid,.path{grid-template-columns:1fr}.labs{grid-template-columns:repeat(2,1fr)}nav{display:none}.facts{grid-template-columns:repeat(2,1fr)}}@media(max-width:600px){.hero{padding-top:54px}.labs{grid-template-columns:1fr}.section-head{display:block}.facts{grid-template-columns:1fr 1fr}.nav .btn{display:none}}
-  </style>
-  <script defer src="https://skunkworksacademy.com/assets/academy-navigation.js?v=2026.08.23.1" data-skunkworks-global-nav="v10"></script>
+  <link rel="stylesheet" href="./assets/mb800-course.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header>
   <div class="shell nav">
-    <a class="brand" href="#top"><span class="mark">SW</span><span><strong>Skunkworks Academy</strong><small>Microsoft Learning</small></span></a>
-    <nav aria-label="Course"><a href="#overview">Overview</a><a href="#labs">Labs</a><a href="#certification">Certification</a></nav>
-    <a class="btn secondary" href="https://microsoft.skunkworksacademy.com/">Microsoft Hub</a>
+    <a class="brand" href="./"><span class="mark">SW</span><span><strong>Skunkworks Academy</strong><small>MB-800 Business Central</small></span></a>
+    <nav aria-label="Course navigation">
+      <a href="#overview">Overview</a>
+      <a href="#modules">Modules</a>
+      <a href="#labs">Labs</a>
+    </nav>
+    <a class="btn secondary" href="./modules/">Course modules</a>
   </div>
 </header>
 
 <main id="main">
-<section class="hero" id="top">
-  <div class="shell grid">
-    <div>
-      <p class="eyebrow">Microsoft Dynamics 365 · Business Central</p>
-      <h1>MB-800<br><span>Business Central Functional Consultant</span></h1>
-      <p class="lede">A practical, lab-led course experience for functional consultants implementing Microsoft Dynamics 365 Business Central. Work through setup, migration, financials, purchasing, sales, inventory, workflows and Copilot-enabled scenarios.</p>
-      <div class="actions">
-        <a class="btn primary" href="#labs">Start the course</a>
-        <a class="btn secondary" href="https://microsoft.skunkworksacademy.com/MB-800-Business-Central-Functional-Consultant/">Open on Microsoft Hub</a>
-      </div>
-      <div class="facts">
-        <div class="fact"><strong>MB-800</strong><span>Exam-aligned</span></div>
-        <div class="fact"><strong>26</strong><span>Hands-on labs</span></div>
-        <div class="fact"><strong>Intermediate</strong><span>Role-based</span></div>
-        <div class="fact"><strong>Dynamics 365</strong><span>Business Central</span></div>
-      </div>
+<section class="hero" id="overview">
+  <div class="shell">
+    <p class="eyebrow">Dynamics 365 · Business Central · Functional Consultant</p>
+    <h1>MB-800<br>Business Central Functional Consultant</h1>
+    <p>A practical, lab-led course for functional consultants implementing Business Central. The course is hosted inside Skunkworks Academy with local module pages and a local lab viewer—no course-content redirect to Microsoft-hosted pages.</p>
+    <div class="actions">
+      <a class="btn primary" href="./modules/">Start Module 01</a>
+      <a class="btn secondary" href="#modules">Browse all modules</a>
     </div>
-    <aside class="panel" id="overview">
-      <h2>What you will work through</h2>
-      <div class="outcome"><b>01</b><strong>Set up Business Central</strong><span>Companies, users, profiles, data migration and workflow configuration.</span></div>
-      <div class="outcome"><b>02</b><strong>Configure financials</strong><span>Chart of accounts, payables, receivables, journals, dimensions and reporting.</span></div>
-      <div class="outcome"><b>03</b><strong>Configure operations</strong><span>Purchasing, sales, inventory, transaction processing and reconciliation.</span></div>
-      <div class="outcome"><b>04</b><strong>Use Copilot scenarios</strong><span>Hands-on exercises for Copilot actions, number series and agent capabilities.</span></div>
-    </aside>
+  </div>
+</section>
+
+<section id="modules">
+  <div class="shell">
+    <div class="section-head">
+      <div><p class="eyebrow">Course structure</p><h2>Five modules. One implementation journey.</h2></div>
+      <p>Progress from environment setup and company configuration through financials, trade, transactions, Copilot and finance reconciliation.</p>
+    </div>
+    <div class="module-grid" id="moduleGrid"></div>
   </div>
 </section>
 
 <section id="labs">
   <div class="shell">
-    <div class="section-head"><div><p class="eyebrow">Course laboratory</p><h2>26 hands-on implementation labs.</h2></div><p>Use the labs in sequence for a complete implementation journey. Each link opens the maintained hosted MB-800 exercise.</p></div>
-    <div class="labs" id="labGrid"></div>
+    <div class="section-head">
+      <div><p class="eyebrow">Hands-on laboratory</p><h2>26 labs hosted inside this course.</h2></div>
+      <p>Every lab opens in the Skunkworks Academy local viewer and renders the exercise directly from this repository.</p>
+    </div>
+    <div class="lab-grid" id="allLabs"></div>
   </div>
 </section>
 
-<section class="light" id="certification">
+<section>
   <div class="shell">
-    <div class="section-head"><div><p class="eyebrow">Certification alignment</p><h2>Build practical evidence for the MB-800 role.</h2></div><p class="copy">Pair the Academy labs with Microsoft Learn and the current MB-800 study guide for structured certification preparation.</p></div>
-    <div class="path">
-      <div class="step"><b>01 · OFFICIAL COURSE</b><h3>Microsoft Learn MB-800T00</h3><p>Use Microsoft’s current role-based learning content as the conceptual backbone for the course.</p><a href="https://learn.microsoft.com/en-us/training/courses/mb-800t00" target="_blank" rel="noopener">Open Microsoft Learn ↗</a></div>
-      <div class="step"><b>02 · CERTIFICATION</b><h3>Business Central Functional Consultant Associate</h3><p>Review the current certification requirements and exam resources before scheduling MB-800.</p><a href="https://learn.microsoft.com/en-us/credentials/certifications/d365-business-central-functional-consultant-associate/" target="_blank" rel="noopener">View certification ↗</a></div>
-      <div class="step"><b>03 · STUDY GUIDE</b><h3>MB-800 skills measured</h3><p>Use the study guide to map labs against the current exam domains and identify remaining study gaps.</p><a href="https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/mb-800" target="_blank" rel="noopener">Open study guide ↗</a></div>
-      <div class="step"><b>04 · ACADEMY HUB</b><h3>Continue in Skunkworks Academy</h3><p>Return to the Microsoft learning hub for additional Microsoft courses, certification pathways and enterprise skilling.</p><a href="https://microsoft.skunkworksacademy.com/">Open Microsoft Hub →</a></div>
+    <div class="module-summary">
+      <div class="summary-box">
+        <p class="eyebrow">Role alignment</p>
+        <h2>Built around the MB-800 functional consultant role.</h2>
+        <p>Use the course to practise company setup, user and profile management, data migration, workflow configuration, financial setup, purchasing, sales, inventory, journal processing, reconciliation and Copilot-enabled scenarios.</p>
+      </div>
+      <div class="summary-box">
+        <p class="eyebrow">Delivery model</p>
+        <h2>Self-contained Skunkworks Academy course experience.</h2>
+        <p>The module pages, navigation and lab viewer remain on the Skunkworks Academy GitHub Pages site. Source exercises are read directly from the repository rather than sending learners to the upstream Microsoft-hosted lab site.</p>
+      </div>
     </div>
   </div>
 </section>
 </main>
 
-<footer><div class="shell footer"><div><strong>Skunkworks Academy</strong><br>MB-800 Business Central Functional Consultant</div><div><a href="https://github.com/skunkworks-academy/MB-800-Business-Central-Functional-Consultant">GitHub repository</a> · <a href="https://microsoft.skunkworksacademy.com/">Microsoft hub</a></div></div></footer>
+<footer>
+  <div class="shell footer">
+    <div><strong>Skunkworks Academy</strong><br>MB-800 Business Central Functional Consultant</div>
+    <div><a href="./modules/">Modules</a> · <a href="./labs/">Lab viewer</a> · <a href="https://github.com/skunkworks-academy/MB-800-Business-Central-Functional-Consultant">Source repository</a></div>
+  </div>
+</footer>
 
+<script src="./assets/mb800-course.js"></script>
 <script>
-const labs=[
-["00","Validate the lab environment","Lab00_Validate_Lab_Environment"],
-["01","Create and configure a new company","Lab01_Create_company"],
-["02","Create and manage user profiles","Lab02_Create_Manage_User_Profiles"],
-["03","Perform actions with Copilot","Lab03_Perform_Actions_with_Copilot"],
-["04","Migrate master data","Lab04_Migrate_Master_data"],
-["05","Set up and use a purchase approval workflow","Lab05_Set_up_and_use_a_purchase_approval_workflow"],
-["06","Configure item costing","Lab06_Configure_Item_Costing"],
-["07","Configure the chart of accounts","Lab07_Configure_Chart_of_Accts"],
-["08","Set up accounts payable","Lab08_Set_up_Accounts_Payable"],
-["09","Set up general journals","Lab09_Set_up_General_Journals"],
-["10","Set up cash management","Lab10_Set_up_Cash_Management"],
-["11","Set up dimensions","Lab11_Set_up_dimensions"],
-["12","Prepare financial reporting","Lab12_Prepare_Financial_Reporting"],
-["13","Manage an accounting period","Lab13_Manage_Accounting_Period"],
-["14","Configure purchasing","Lab14_Configure_Purchasing"],
-["15","Set up accounts receivable","Lab15_Set_up_Accounts_Receivable"],
-["16","Set up inventory","Lab16_Set_up_Inventory"],
-["17","Configure sales","Lab17_Configure_Sales"],
-["18","Perform basic Business Central tasks","Lab18_Perform_Basic_Tasks"],
-["19","Process purchasing transactions","Lab19_Process_Purchase"],
-["20","Process sales transactions","Lab20_Process_Sales"],
-["21","Suggest number series with Copilot","Lab21_Suggest_Number_Series_Copilot"],
-["22","Configure Copilot agent capabilities","Lab22_Configure_Copilot_Agent_Capabilities"],
-["23","Perform finance operations","Lab23_Perform_Finance_Operations"],
-["24","Reconcile customer and vendor accounts","Lab24_Reconcile_Customer_Vendor"],
-["25","Process cash management","Lab25_Process_Cash_Management"]
-];
-const base="https://microsoftlearning.github.io/MB-800-Business-Central-Functional-Consultant/Instructions/Labs/";
-document.getElementById("labGrid").innerHTML=labs.map(([n,t,f])=>'<a class="card" target="_blank" rel="noopener" href="'+base+f+'.html"><span class="num">LAB '+n+'</span><h3>'+t+'</h3><p>Hands-on MB-800 implementation exercise.</p><span>Open lab →</span></a>').join("");
+MB800.renderModuleDirectory();
+const allLabs=document.getElementById("allLabs");
+allLabs.innerHTML=MB800.modules.flatMap(m=>m.labs.map(l =>
+  '<a class="card" href="./labs/?file='+encodeURIComponent(l[2])+'"><span class="pill">LAB '+l[0]+'</span><h3>'+l[1]+'</h3><p>Module '+m.id+' — '+m.title+'</p><div class="meta"><span>'+l[3]+'</span><span>Level '+l[4]+'</span></div></a>'
+)).join("");
 </script>
 </body>
 </html>
