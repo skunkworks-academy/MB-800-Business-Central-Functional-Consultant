@@ -1,0 +1,13 @@
+{
+  "name": "skunkworks-mb800-course",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "build": "node web/build.cjs",
+    "test": "node --test web/route-url.test.cjs"
+  },
+  "dependencies": {
+    "markdown-it": "14.3.1",
+    "yaml": "2.9.0"
+  }
+}
