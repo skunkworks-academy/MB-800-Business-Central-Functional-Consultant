@@ -36,14 +36,14 @@ moduleById(id){return this.modules.find(m=>m.id===id)},
 labByFile(file){for(const m of this.modules){const lab=m.labs.find(l=>l[2]===file);if(lab)return {module:m,lab};}return null},
 renderModuleDirectory(base="./"){
  const el=document.getElementById("moduleGrid");if(!el)return;
- el.innerHTML=this.modules.map(m=>'<a class="card" href="'+base+m.slug+'/"><span class="pill">MODULE '+m.id+'</span><h3>'+m.title+'</h3><p>'+m.description+'</p><div class="meta"><span>'+m.labs.length+' labs</span><span>'+m.duration+'</span><span>Level '+m.level+'</span></div></a>').join("");
+ el.innerHTML=this.modules.map(m=>'<a class="mb800-card" href="'+base+m.slug+'/"><span class="mb800-pill">MODULE '+m.id+'</span><h3>'+m.title+'</h3><p>'+m.description+'</p><div class="mb800-card__meta"><span>'+m.labs.length+' labs</span><span>'+m.duration+'</span><span>Level '+m.level+'</span></div></a>').join("");
 },
 renderModule(id){
  const m=this.moduleById(id);if(!m)return;
  const title=document.getElementById("moduleTitle"),desc=document.getElementById("moduleDescription"),meta=document.getElementById("moduleMeta"),obj=document.getElementById("moduleObjectives"),labs=document.getElementById("moduleLabs");
  if(title)title.textContent="Module "+m.id+" — "+m.title;if(desc)desc.textContent=m.description;if(meta)meta.textContent=m.labs.length+" labs · "+m.duration+" · Level "+m.level;
  if(obj)obj.innerHTML=m.objectives.map(x=>"<li>"+x+"</li>").join("");
- if(labs)labs.innerHTML=m.labs.map(l=>'<a class="card" href="../../labs/?file='+encodeURIComponent(l[2])+'"><span class="pill">LAB '+l[0]+'</span><h3>'+l[1]+'</h3><p>Hands-on MB-800 implementation exercise.</p><div class="meta"><span>'+l[3]+'</span><span>Level '+l[4]+'</span></div></a>').join("");
+ if(labs)labs.innerHTML=m.labs.map(l=>'<a class="mb800-card" href="../../labs/?file='+encodeURIComponent(l[2])+'"><span class="mb800-pill">LAB '+l[0]+'</span><h3>'+l[1]+'</h3><p>Hands-on MB-800 implementation exercise.</p><div class="mb800-card__meta"><span>'+l[3]+'</span><span>Level '+l[4]+'</span></div></a>').join("");
  const idx=this.modules.findIndex(x=>x.id===id);const prev=document.getElementById("prevModule"),next=document.getElementById("nextModule");
  if(prev){if(idx>0){prev.href="../"+this.modules[idx-1].slug+"/";prev.textContent="← Module "+this.modules[idx-1].id}else prev.style.visibility="hidden"}
  if(next){if(idx<this.modules.length-1){next.href="../"+this.modules[idx+1].slug+"/";next.textContent="Module "+this.modules[idx+1].id+" →"}else next.href="../../"}
