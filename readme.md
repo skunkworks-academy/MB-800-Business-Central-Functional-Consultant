@@ -12,6 +12,8 @@ navigation loader when updating the frontend.
 
 Requires Node.js 20+ and Python 3:
 
+Use `python3` instead of `python` below if that is your Python 3 executable.
+
 ```sh
 npm ci --ignore-scripts
 npm run build

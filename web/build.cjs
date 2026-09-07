@@ -3,6 +3,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const MarkdownIt = require('markdown-it');
 const YAML = require('yaml');
+const routeUrl = require('./route-url.cjs');
 const root = path.resolve(__dirname, '..');
 const out = path.join(root, 'site');
 const base = 'https://microsoft.skunkworksacademy.com/MB-800/';
@@ -36,8 +37,8 @@ function page(title, description, route, content, prefix = '') {
   return `<!doctype html>
 <html lang="en-ZA"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${escape(title)} | Skunkworks Academy</title><meta name="description" content="${escape(description)}">
-<link rel="canonical" href="${base}${route}"><meta name="theme-color" content="#0b1220">
-<meta property="og:type" content="website"><meta property="og:title" content="${escape(title)}"><meta property="og:description" content="${escape(description)}"><meta property="og:url" content="${base}${route}">
+<link rel="canonical" href="${base}${routeUrl(route)}"><meta name="theme-color" content="#0b1220">
+<meta property="og:type" content="website"><meta property="og:title" content="${escape(title)}"><meta property="og:description" content="${escape(description)}"><meta property="og:url" content="${base}${routeUrl(route)}">
 <link rel="stylesheet" href="${prefix}assets/microsoft-hub.css"><link rel="stylesheet" href="${prefix}assets/course.css">
 <script defer src="https://skunkworksacademy.com/assets/academy-navigation.js?v=2026.08.23.1" data-skunkworks-global-nav="v10"></script>
 </head><body><a class="skip-link" href="#main">Skip to content</a>
@@ -53,12 +54,12 @@ fs.cpSync(path.join(root, 'Instructions'), path.join(out, 'Instructions'), {recu
 fs.mkdirSync(path.join(out, 'assets'), {recursive:true});
 for (const name of ['microsoft-hub.css','course.css']) fs.copyFileSync(path.join(__dirname, name), path.join(out, 'assets', name));
 fs.copyFileSync(path.join(root, 'LICENSE'), path.join(out, 'LICENSE'));
-const cards = labs.map(lab => `<li><span class="catalog-type">${escape(lab.duration || 'Hands-on lab')}</span><h3><a href="${lab.route}">${escape(lab.title)}</a></h3><p>${escape(lab.module)}</p></li>`).join('\n');
+const cards = labs.map(lab => `<li><span class="catalog-type">${escape(lab.duration || 'Hands-on lab')}</span><h3><a href="${routeUrl(lab.route)}">${escape(lab.title)}</a></h3><p>${escape(lab.module)}</p></li>`).join('\n');
 let homepage = fs.readFileSync(path.join(__dirname, 'overview.html'), 'utf8').replace('<!-- LABS -->', cards).replaceAll('{{LAB_COUNT}}', String(labs.length));
 write('index.html', page('MB-800: Business Central Functional Consultant', 'Learn to configure Dynamics 365 Business Central with practical labs covering company setup, finance, purchasing, sales, inventory and Copilot.', '', homepage));
 labs.forEach((lab, i) => {
   const previous = labs[i-1], next = labs[i+1];
-  const pagination = `<nav class="course-pagination" aria-label="Lab sequence">${previous ? `<a href="${path.posix.basename(previous.route)}">← ${escape(previous.title)}</a>` : '<a href="../../index.html#labs">Back to lab directory</a>'}${next ? `<a href="${path.posix.basename(next.route)}">${escape(next.title)} →</a>` : '<a href="../../index.html#labs">Return to course overview →</a>'}</nav>`;
+  const pagination = `<nav class="course-pagination" aria-label="Lab sequence">${previous ? `<a href="${routeUrl(path.posix.basename(previous.route))}">← ${escape(previous.title)}</a>` : '<a href="../../index.html#labs">Back to lab directory</a>'}${next ? `<a href="${routeUrl(path.posix.basename(next.route))}">${escape(next.title)} →</a>` : '<a href="../../index.html#labs">Return to course overview →</a>'}</nav>`;
   write(lab.route, page(lab.title, lab.module, lab.route, `<section class="shell course-section"><p class="eyebrow">MB-800 · ${escape(lab.duration || 'Hands-on lab')}</p><h1>${escape(lab.title)}</h1><p>${escape(lab.module)}</p>${pagination}<article class="lab-body" aria-label="Lab instructions">${md.render(lab.body)}</article>${pagination.replace('aria-label="Lab sequence"', 'aria-label="Continue learning"')}</section>`, '../../'));
 });
 const setup = read(path.join(root, 'Instructions', 'Lab00_Lab_Setup.md'));
